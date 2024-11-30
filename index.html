@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blood Donation - Home</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <style>
+        /* Add styles for the map */
+        #map {
+            height: 400px;
+            width: 100%;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>Blood Donation Center</h1>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h2>Welcome to the Blood Donation Center</h2>
+            <p class="quote">"The blood you donate gives someone another chance at life. Be a hero, donate today."</p>
+            <p class="mission">At the Blood Donation Center, we work to connect willing donors with hospitals in need, saving lives and giving hope to those in critical need of blood.</p>
+            <div class="cta-buttons">
+                <a href="about.html" class="button">Learn More</a>
+                <a href="contact.html" class="button">Register Now</a>
+            </div>
+        </section>
+
+        <!-- Map Section -->
+        <section>
+            <h2>Find Nearby Blood Donation Centers</h2>
+            <!-- Map container -->
+            <div id="map"></div>
+        </section>
+
+        <section class="how-we-help">
+            <h2>How We Help</h2>
+            <p>We collaborate with local hospitals, health organizations, and emergency centers to provide safe and timely blood donations to patients in need. Your contribution can save lives, and we make it easy for you to donate with nearby blood donation centers.</p>
+        </section>
+
+        <section class="resources">
+            <h2>Organizations and Resources</h2>
+            <ul>
+                <li><a href="https://www.redcross.org/" target="_blank">American Red Cross</a></li>
+                <li><a href="https://www.nhp.gov.in/" target="_blank">National Health Portal of India</a></li>
+                <li><a href="https://www.who.int/" target="_blank">World Health Organization (WHO)</a></li>
+                <li><a href="https://www.indianblooddonors.com/" target="_blank">Indian Blood Donors</a></li>
+                <li><a href="https://bloodconnect.org/" target="_blank">BloodConnect Foundation</a></li>
+            </ul>
+        </section>
+
+        <section class="nearby-centers">
+            <h2>Nearby Blood Donation Centers</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Center Name</th>
+                        <th>Location</th>
+                        <th>Contact</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>City Hospital Blood Bank</td>
+                        <td>Delhi</td>
+                        <td>+91-12345-67890</td>
+                    </tr>
+                    <tr>
+                        <td>Red Cross Blood Bank</td>
+                        <td>Mumbai</td>
+                        <td>+91-23456-78901</td>
+                    </tr>
+                    <tr>
+                        <td>Life Care Blood Donation Center</td>
+                        <td>Bangalore</td>
+                        <td>+91-34567-89012</td>
+                    </tr>
+                    <tr>
+                        <td>BloodConnect HQ</td>
+                        <td>Kolkata</td>
+                        <td>+91-45678-90123</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Blood Donation Center. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        var map = L.map('map').setView([20.5937, 78.9629], 5); 
+
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+
+        var marker = L.marker([28.6139, 77.2090]).addTo(map);
+        marker.bindPopup("<b>City Hospital Blood Bank</b><br>Delhi").openPopup();
+
+        var marker2 = L.marker([19.0760, 72.8777]).addTo(map);
+        marker2.bindPopup("<b>Red Cross Blood Bank</b><br>Mumbai");
+
+        var marker3 = L.marker([12.9716, 77.5946]).addTo(map);
+        marker3.bindPopup("<b>Life Care Blood Donation Center</b><br>Bangalore");
+
+        var marker4 = L.marker([22.5726, 88.3639]).addTo(map);
+        marker4.bindPopup("<b>BloodConnect HQ</b><br>Kolkata");
+        
+        var marker5 = L.marker([21.2514, 81.6296]).addTo(map);
+    marker5.bindPopup("<b>Raipur Blood Bank</b><br>Raipur, Chhattisgarh");
+
+    var marker6 = L.marker([21.1860, 81.3180]).addTo(map);
+    marker6.bindPopup("<b>Bhilai Blood Donation Center</b><br>Bhilai, Chhattisgarh");
+    </script>
+</body>
+</html>

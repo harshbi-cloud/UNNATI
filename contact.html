@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blood Donation - Contact</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Contact Us</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+    <main>
+
+        <section>
+            <h2>Organizations and Resources</h2>
+            <ul>
+                <li><a href="https://www.redcross.org/" target="_blank">American Red Cross</a></li>
+                <li><a href="https://www.nhp.gov.in/" target="_blank">National Health Portal of India</a></li>
+                <li><a href="https://www.who.int/" target="_blank">World Health Organization (WHO)</a></li>
+                <li><a href="https://www.indianblooddonors.com/" target="_blank">Indian Blood Donors</a></li>
+                <li><a href="https://bloodconnect.org/" target="_blank">BloodConnect Foundation</a></li>
+            </ul>
+        </section>
+        <section>
+            <h2>Nearby Blood Donation Centers</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Center Name</th>
+                        <th>Location</th>
+                        <th>Contact</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>City Hospital Blood Bank</td>
+                        <td>Delhi</td>
+                        <td>+91-12345-67890</td>
+                    </tr>
+                    <tr>
+                        <td>Red Cross Blood Bank</td>
+                        <td>Mumbai</td>
+                        <td>+91-23456-78901</td>
+                    </tr>
+                    <tr>
+                        <td>Life Care Blood Donation Center</td>
+                        <td>Bangalore</td>
+                        <td>+91-34567-89012</td>
+                    </tr>
+                    <tr>
+                        <td>BloodConnect HQ</td>
+                        <td>Kolkata</td>
+                        <td>+91-45678-90123</td>
+                        <tr>
+                            <td>Chhattisgarh Blood Bank</td>
+                            <td>Raipur, Chhattisgarh</td>
+                            <td>+91-56789-01234</td>
+                        </tr>
+                        <tr>
+                            <td>Bhilai Blood Donation Center</td>
+                            <td>Bhilai, Chhattisgarh</td>
+                            <td>+91-67890-12345</td>
+                        </tr>
+                </tbody>
+            </table>
+        </section>
+        <h2>Get in Touch</h2>
+        <form action="process.php" method="POST">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+            
+            <button type="submit">Send Message</button>
+        </form>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
